@@ -1,65 +1,56 @@
 #ifndef QUEUE_H
 #define QUEUE_H
 
-#include "MyVector.h"
+#include <vector>
 #include <stdexcept>
 
-template<class T, template<class U> class TContainer = MyVector>
+template<class T>
 class Queue {
 private:
-    TContainer<T> data;
+    std::vector<T> data;
 
 public:
     Queue() = default;
     
-    // Добавление в конец
     void push(const T& value) {
         data.push_back(value);
     }
     
-    void push(T&& value) {
-        data.push_back(std::move(value));
-    }
-    
-    // Удаление из начала
     void pop() {
         if (empty()) {
             throw std::out_of_range("Queue is empty");
         }
-        data.erase(0);
+        data.erase(data.begin());
     }
     
-    // Доступ к первому элементу
     T& front() {
         if (empty()) {
             throw std::out_of_range("Queue is empty");
         }
-        return data[0];
+        return data.front();
     }
     
     const T& front() const {
         if (empty()) {
             throw std::out_of_range("Queue is empty");
         }
-        return data[0];
+        return data.front();
     }
     
-    // Доступ к последнему элементу
     T& back() {
         if (empty()) {
             throw std::out_of_range("Queue is empty");
         }
-        return data[data.size() - 1];
+        return data.back();
     }
     
     const T& back() const {
         if (empty()) {
             throw std::out_of_range("Queue is empty");
         }
-        return data[data.size() - 1];
+        return data.back();
     }
     
-    // Состояние
     bool empty() const {
         return data.empty();
     }
@@ -68,7 +59,6 @@ public:
         return data.size();
     }
     
-    // Очистка
     void clear() {
         data.clear();
     }

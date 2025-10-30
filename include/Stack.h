@@ -1,13 +1,13 @@
 #ifndef STACK_H
 #define STACK_H
 
-#include "MyVector.h"
+#include <vector>
 #include <stdexcept>
 
-template<class T, template<class U> class TContainer = MyVector>
+template<class T>
 class Stack
 {
-    TContainer<T> data;
+    std::vector<T> data;
 public:
     Stack() = default;
     

@@ -5,13 +5,13 @@
 #include "Queue.h"
 #include <string>
 
-// Задача 1: Проверка баланса скобок
+// task 1 , которое про скобочки
 class BracketChecker {
 public:
-    static bool check(const std::string& expression) {
+    static bool check(const std::string& str) {
         Stack<char> stack;
         
-        for (char ch : expression) {
+        for (char ch : str) {
             if (ch == '(' || ch == '[' || ch == '{') {
                 stack.push(ch);
             }
@@ -33,7 +33,9 @@ public:
     }
 };
 
-// Задача 2: Очередь на двух стеках
+// task 2 , которое очередь на двух стеках
+//в inStack добавляем , из outStack извлекаем
+//если outStack пусто переложим из inStack туда, элементы перевернутся по дефолту, можем извлечь элемент который лежал в самом низу первым
 template<class T>
 class QueueFromStacks {
     Stack<T> inStack;
@@ -82,4 +84,4 @@ public:
     }
 };
 
-#endif
+#endif // TASKS_H
