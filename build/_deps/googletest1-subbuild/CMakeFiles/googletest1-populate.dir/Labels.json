@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/googletest1-populate"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/d97b028fe18661f0fb473ce6c0d98350/googletest1-populate.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/88ff46340c630866825f73ace4dbbc8d/googletest1-populate-complete.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-build.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-configure.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-download.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-install.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-patch.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-test.rule"
+		},
+		{
+			"file" : "C:/gitprojs/Data-Structures/build/_deps/googletest1-subbuild/CMakeFiles/9d6cb37431dd9f5902a63b32214c1c11/googletest1-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"googletest1-populate"
+		],
+		"name" : "googletest1-populate"
+	}
+}

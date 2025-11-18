@@ -1,0 +1,5 @@
+﻿  Building Custom Rule C:/gitprojs/Data-Structures/googletest/googlemock/CMakeLists.txt
+  gtest-all.cc
+  gmock-all.cc
+  Создание кода...
+  gmock.vcxproj -> C:\gitprojs\Data-Structures\build\lib\Debug\gmock.lib
