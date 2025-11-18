@@ -16,11 +16,10 @@ private:
     }
 
 public:
-    Queue() : data(8) {}  // начальный размер
+    Queue() : data(8) {} //задаю какой-то начальный размер
     
     void push(const T& value) {
         if (count == data.size()) {
-            // Увеличиваем размер буфера
             std::vector<T> new_data(data.size() * 2);
             for (size_t i = 0; i < count; ++i) {
                 new_data[i] = std::move(data[(head + i) % data.size()]);
