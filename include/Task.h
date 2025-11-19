@@ -4,6 +4,7 @@
 #include "Stack.h"
 #include "Queue.h"
 #include <string>
+#include "ForwardList.h"
 
 // task 1 , которое про скобочки
 class BracketChecker {
@@ -84,4 +85,75 @@ public:
     }
 };
 
+
+//////для листа задачка
+
+namespace Task {
+/*  Печать элементов списка в обратном порядке за O(n) времени и O(1) памяти
+    список в конце должен быть не поломанным */
+
+
+/*идея решения: первым проходом разворачиваю все указатели next
+    вторым проходом вывожу все элементы в нужном порядке
+    третьим проходом возвращаю всё на места*/
+
+
+/*попробую доказать, что время O(n) , а память O(1):
+    1) по памяти короче, использую prev -указатель , O(1) cur -указатель , O(1),next -указатель , O(1)
+    всего три прохода , во втором переиспользуется cur, в третьем переиспользуется next and prev
+    по сути ни массивов ничего такого я не создаю, три прохода используют одни и те же указатели, но просто переиспользованные,
+    значит по идее по памяти O(1) выполняется
+    
+    2) по времени: делаю 3 цикла, которые проходят по списку длиной n:
+    while(cur != nullprt) - n итераций, таких 3, значит 3n, значит O(3n), значит O(n), значит круто
+    
+    3)ну а за 3 прохода, я перевернула указатели,вывела список, ну и вернула на место всё, так что список не ломала*/
+template <typename T>
+void printReverse(const ForwardList<T>& list)
+{
+    if (list.empty()) return;
+
+    using Node = typename ForwardList<T>::Node;
+    Node* head = const_cast<Node*>(list.first);
+    
+    if (head == nullptr) return;
+
+    // 1. Разворот списка
+    Node* prev = nullptr;
+    Node* cur = head;
+    Node* next = nullptr;
+    
+    while (cur != nullptr) {
+        next = cur->next;
+        cur->next = prev;
+        prev = cur;
+        cur = next;
+    }
+    // Теперь prev - новая голова перевернутого списка
+
+    // 2. Печать перевернутого списка (который теперь в прямом порядке)
+    cur = prev;
+    while (cur != nullptr) {
+        std::cout << cur->data << ' ';
+        cur = cur->next;
+    }
+    std::cout << '\n';
+
+    // 3. Восстанавливаем исходный порядок, снова разворачивая список
+    cur = prev;
+    prev = nullptr;
+    next = nullptr;
+    
+    while (cur != nullptr) {
+        next = cur->next;
+        cur->next = prev;
+        prev = cur;
+        cur = next;
+    }
+    // Теперь prev снова указывает на исходную голову
+    
+    // Восстанавливаем указатель в исходном списке
+    const_cast<ForwardList<T>&>(list).first = prev;
+}
+}
 #endif // TASKS_H
