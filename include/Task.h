@@ -113,7 +113,6 @@ void printReverse(const ForwardList<T>& list)
 {
     if (list.empty()) return;
 
-    // Временно снимаем const для модификации (осторожно!)
     using Node = typename ForwardList<T>::Node;
     Node* head = const_cast<Node*>(list.first);
     
