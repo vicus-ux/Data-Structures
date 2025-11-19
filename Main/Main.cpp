@@ -4,7 +4,7 @@
 #include "../include/Stack.h"
 #include "../include/Task.h"
 
-
+//перетащила main
 
 int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
