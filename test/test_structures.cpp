@@ -257,7 +257,7 @@ TEST(QueueFromStacksTest, FrontEmptyThrows) {
     EXPECT_THROW(queue.front(), std::out_of_range);
 }
 
-// Интеграционные тесты
+
 TEST(IntegrationTest, StackAndQueueTogether) {
     Stack<int> stack;
     Queue<int> queue;
@@ -284,7 +284,7 @@ TEST(IntegrationTest, BracketCheckerWithQueue) {
     EXPECT_FALSE(BracketChecker::check(test_cases.front()));
 }
 
-int main(int argc, char **argv) {
+/*int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
-}
+}*/
