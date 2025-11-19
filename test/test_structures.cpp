@@ -1,7 +1,7 @@
 #include <gtest/gtest.h>
-#include "Stack.h"
-#include "Queue.h"
-#include "Task.h"
+#include "../include/Stack.h"
+#include "../include/Queue.h"
+#include "../include/Task.h"
 
 // Тесты для Stack
 TEST(StackTest, IsEmptyOnCreation) {
@@ -284,7 +284,7 @@ TEST(IntegrationTest, BracketCheckerWithQueue) {
     EXPECT_FALSE(BracketChecker::check(test_cases.front()));
 }
 
-int main(int argc, char **argv) {
+/*int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     return RUN_ALL_TESTS();
-}
+}*/
