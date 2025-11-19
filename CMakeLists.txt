@@ -14,15 +14,14 @@ FetchContent_MakeAvailable(googletest)
 include_directories(include)
 include_directories(${googletest_SOURCE_DIR}/googletest/include)
 
-# Основное приложение со ВСЕМИ тестами
+
 add_executable(Main_app 
     Main/Main.cpp
-    test/test_structures.cpp      # ← ДОБАВЬТЕ тестовые файлы
-    test/testForwardList.cpp      # ← ДОБАВЬТЕ тестовые файлы
+    test/test_structures.cpp      
+    test/testForwardList.cpp      
 )
 target_link_libraries(Main_app gtest gtest_main)
 
-# Отдельные тестовые исполняемые файлы (опционально)
 add_executable(test_structures test/test_structures.cpp)
 target_link_libraries(test_structures gtest gtest_main)
 
